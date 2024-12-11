@@ -1,5 +1,5 @@
 using BayesianBlockModels
-using Test
+using Test, LinearAlgebra
 
 # Test simulate_sbm function
 @testset "simulate_sbm tests" begin
