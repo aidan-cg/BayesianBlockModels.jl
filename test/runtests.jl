@@ -1,8 +1,5 @@
-using Test, StatsBase, Distributions, Random, LinearAlgebra
-
-include("gibbs.jl")
-include("sample.jl")
-include("util.jl")
+using BayesianBlockModels
+using Test
 
 # Test simulate_sbm function
 @testset "simulate_sbm tests" begin
