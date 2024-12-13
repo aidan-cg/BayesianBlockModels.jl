@@ -15,8 +15,9 @@ A dictionary containing the following keys:
 - `:group_samples`: A matrix of size `n_samp x N`, where each row contains the group assignments for all nodes at a given iteration.
 - `:theta_samples`: A matrix of size `n_samp x K`, where each row contains the sampled group weights for a given iteration.
 - `:pi_samples`: A 3D array of size `K x K x n_samp`, where each slice `pi_samples[:, :, t]` contains the sampled link probabilities for iteration `t`.
+
 """
-function gibbs_sample(A::AbstractMatrix{<:Real}, K::Int, n_samp::Int, n_burnin::Int, α::Float64, a::Float64, b::Float64)
+function gibbs_sample(A::AbstractMatrix{<:Real}, K::Int, n_samp::Int, n_burnin::Int, α::Real, a::Real, b::Real)
     N = size(A, 1)
 
     # Initialize parameter values
